@@ -1,0 +1,36 @@
+page-home {
+
+  ion-item {
+    padding: 0 !important;
+  }
+  ion-item ion-label {
+    width: 100vw;
+    height: 33vw;
+  }
+
+  ion-item table {
+    width: 100vw;
+    height: 33vw;
+  }
+
+  ion-item ion-img, img {
+    width: 33vw;
+    height: 33vw;
+  }
+
+  .new-item-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    bottom: -0px;
+    right: -0px;
+    background: darkred;
+  }
+
+
+
+
+}

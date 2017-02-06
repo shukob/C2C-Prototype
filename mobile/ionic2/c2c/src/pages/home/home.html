@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title center>{{title||''}}</ion-title>
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button>
+        <ion-icon name="alert"></ion-icon>
+      </button>
+      <button ion-button>
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-slides loop="true" slidesPerView="3" style="height: 40px;">
+    <ion-slide *ngFor="let c of categories" style="width: 30vw;">{{c.title}}</ion-slide>
+  </ion-slides>
+  <!--<ion-slides>-->
+  <!--<ion-slide *ngFor="let c of categories">-->
+  <ion-list [virtualScroll]="itemChunks" id="list">
+    <ion-item *virtualItem="let itemChunk" [style.height]="imageSize">
+      <ion-img [src]="itemChunk[0].thumbnailUrl" [width]="imageSize"
+               [height]="imageSize" *ngIf="itemChunk.length > 0"></ion-img>
+      <ion-img [src]="itemChunk[1].thumbnailUrl" [width]="imageSize"
+               [height]="imageSize" *ngIf="itemChunk.length > 1"></ion-img>
+      <ion-img [src]="itemChunk[2].thumbnailUrl" [width]="imageSize" [height]="imageSize"
+               *ngIf="itemChunk.length > 2"></ion-img>
+    </ion-item>
+  </ion-list>
+  <!--</ion-slide>-->
+  <!--</ion-slides>-->
+  <div class="new-item-button" (click)="showNewItem();">
+  </div>
+</ion-content>
