@@ -9,6 +9,6 @@ class Review extends Model
     //
     public function purchase()
     {
-        return $this->belongsTo('App\Purchase', 'purchase_id');
+        return $this->belongsTo('App\Purchase');
     }
 }

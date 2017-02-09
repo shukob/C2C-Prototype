@@ -34,11 +34,11 @@ class User extends Authenticatable
 
     public function likes()
     {
-        $this->hasMany('App\Like', 'user_id');
+        $this->hasMany('App\Like');
     }
 
 
     public function purchases(){
-        $this->hasMany('App\Purchase', 'purchase_id');
+        $this->hasMany('App\Purchase');
     }
 }

@@ -8,6 +8,6 @@ class TransferRequest extends Model
 {
     //
     public function purchase(){
-        $this->belongsTo('App\Purchase', 'purchase_id');
+        $this->belongsTo('App\Purchase');
     }
 }
