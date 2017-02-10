@@ -17,15 +17,6 @@ class Notification extends Model
         return $this->belongsToMany('App\Device');
     }
 
-    public static function boot()
-    {
-        parent::boot();
-
-        self::created(function ($model) {
-            $model->notify_once();
-        });
-    }
-
     public function notify_once()
     {
         foreach ($this->devices() as $device) {

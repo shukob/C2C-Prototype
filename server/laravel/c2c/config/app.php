@@ -179,7 +179,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
         Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class,
-
+        Laralib\L5scaffold\GeneratorsServiceProvider::class,
     ],
 
     /*
