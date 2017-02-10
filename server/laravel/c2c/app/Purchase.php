@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Purchase extends Model
 {
+    protected $fillable = ['item_id'];
     //
     public function user(){
         return $this->belongsTo('App\User');
