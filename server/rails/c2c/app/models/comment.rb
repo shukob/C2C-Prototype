@@ -2,6 +2,7 @@ class Comment < ApplicationRecord
   belongs_to :item
   belongs_to :from_user, class_name: User
   belongs_to :to_user, class_name: User
+  has_one :notification, as: :source
 
   validates :from_user, presence: true
   validates :item, presence: true
